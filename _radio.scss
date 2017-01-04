@@ -1,0 +1,64 @@
+// ==========================================================================
+// RADIO
+// ==========================================================================
+/*doc
+---
+title: Radio buttons
+name: 7_radio
+category: forms
+---
+
+```html_example
+<form class="">
+    <input type="radio" name="radio" class="radio" value="Yes" id="yes">
+    <label for="yes" class="label label--inline">Yes</label>
+    <input type="radio" name="radio" class="radio" value="No" id="no">
+    <label for="no" class="label label--inline">No</label>
+</form>
+```
+*/
+
+
+.radio {
+    display: none;
+
+    & + label {
+        position: relative;
+        padding-left: rem-calc(20);
+        transition: color 200ms;
+
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            border-radius: 100%;
+        }
+
+        &:before {
+            transition: opacity 200ms;
+            opacity: 0;
+            left: rem-calc(4);
+            top: rem-calc(4);
+            width: rem-calc(6);
+            height: rem-calc(6);
+            background-color: palette(pink);
+        }
+
+        &:after {
+            left: 0;
+            top: 0;
+            width: rem-calc(12);
+            height: rem-calc(12);
+            background-color: transparent;
+            border: 1px solid palette(grey);
+        }
+    }
+
+    &:checked + label {
+        color: palette(pink);
+
+        &:before {
+            opacity: 1;
+        }        
+    }
+}
