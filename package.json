@@ -18,5 +18,9 @@
     "url": "https://github.com/mise-en-place/forms.radio.git"
   },
   "author": "Kind",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "mep-tools.palette": "github:mise-en-place/tools.palette",
+    "mep-tools.rem-calc": "github:mise-en-place/tools.rem-calc"
+  }
 }
