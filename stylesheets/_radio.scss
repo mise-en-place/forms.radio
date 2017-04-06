@@ -19,8 +19,8 @@ category: forms
 ```
 */
 
-@import "tool-palette";
-@import "tool-rem-calc";
+@import "~mep-tools.palette";
+@import "~mep-tools.rem-calc";
 
 .radio {
     display: none;
